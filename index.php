@@ -16,13 +16,15 @@ var_dump($maVariable);
 $tableauEx3['Dupont'] = ['Gerard'=>1, 'Paris'=>2, 67=>3];
 $tableauEx3['Badin'] = ['Aurelie'=>1, 'Nantes'=>2, 3];
 foreach ($tableauEx3 as $cle => $values) {
-    $i = 0;
     echo "<ul> Element $cle";
+    foreach($cle as $test) {
+
     "<li> element $values </li>";
 
+    }
+"</ul>";
 }
 ?>
-</ul>
 </body>
 </html>
 
