@@ -21,7 +21,9 @@ var_dump($personnes);
 $tableauEx2Nom['Marech'] = ['Lulu'=>'Lulu', 'Marech','Nantes'=>44000,'35'=>35];
 var_dump($tableauEx2Nom);
 //Correction
-
+$caliendo = ["Caliendo"=>["prenom" => "Julien", "ville" => "Brest", "age" => 36]];
+$tab ["Caliendo"] = $caliendo;
+var_dump($tab);
 
 //Exo3
 
