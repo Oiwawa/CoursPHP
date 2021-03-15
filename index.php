@@ -13,17 +13,8 @@ echo "Hello World - $maVariable ";
 var_dump($maVariable);
 ?>
 <?php
-$tableauEx3['Dupont'] = ['Gerard'=>1, 'Paris'=>2, 67=>3];
-$tableauEx3['Badin'] = ['Aurelie'=>1, 'Nantes'=>2, 3];
-foreach ($tableauEx3 as $cle => $values) {
-    echo "<ul> Element $cle";
-    foreach($cle as $test) {
-
-    "<li> element $values </li>";
-
-    }
-"</ul>";
-}
+$date = mktime(17,30,00,03,15,2021);
+echo $date;
 ?>
 </body>
 </html>
