@@ -5,18 +5,24 @@ function randomiser($valeur)  {
     if($valeur > MAX_VALEUR || $valeur < MIN_VALEUR ) {
         echo 'La valeur indiquée doit être supérieure à '.MIN_VALEUR.' et inférieur à '. MAX_VALEUR .'.';
     } else {
-        $nbrAlea = 0;
         $compteur = 0;
-
         do {
         $nbrAlea = rand(MIN_VALEUR , MAX_VALEUR);
-        $compteur+=1;
+        $compteur++;
         } while ($nbrAlea != $valeur);
-
-        echo $nbrAlea .' a été tiré au sort après '. $compteur .' essais. Cela correspond bien à la valeur de départ: '.$valeur;
+       return $compteur;
     }
-
-
 }
-randomiser(999);
+echo randomiser(999);
 
+//CORRECTION
+
+function nbEssai(int $param1) : int {
+    $cpt = 0;
+    while (rand(0, 999) != $param1) {
+        $cpt++;
+    }
+    return $cpt;
+}
+
+nbEssai(54);
