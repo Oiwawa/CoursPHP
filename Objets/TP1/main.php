@@ -13,7 +13,7 @@ $biarritz->setDepartement("64");
 
 //Partie 2
 
-$nantes = new ville("Nantes", "44");
+$nantes = new Ville("Nantes", "44");
 $leMans = new Ville("Le Mans", "72");
 
 echo $nantes->afficher();
