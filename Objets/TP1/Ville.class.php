@@ -16,6 +16,7 @@ class Ville
     {
         $this->nom = $nom;
         $this->departement = $departement;
+        $this->nomVillePlusLong();
     }
 
     /**
@@ -32,7 +33,7 @@ class Ville
     public function setNom($nom)
     {
         $this->nom = $nom;
-
+        $this->nomVillePlusLong();
     }
 
     /**
@@ -50,20 +51,13 @@ class Ville
     {
         $this->departement = $departement;
     }
+
     /**
      * @return string
      */
-    public function getVilleNomLePlusLong(): string
+    public static function getVilleNomLePlusLong(): string
     {
-        return nomVillePlusLong();
-    }
-
-    /**
-     * @param string $villeNomLePlusLong
-     */
-    public static function setVilleNomLePlusLong(string $villeNomLePlusLong)
-    {
-        self::$villeNomLePlusLong;
+        return static::$villeNomLePlusLong;
     }
 
 
@@ -72,11 +66,10 @@ class Ville
         return "La ville $this->nom est dans le département $this->departement ";
     }
 
-    public function nomVillePlusLong(): string
+    private function nomVillePlusLong()
     {
-        if (count($this->nom) > count(static::$villeNomLePlusLong)) {
+        if (strlen($this->nom) > strlen(static::$villeNomLePlusLong)) {
             static::$villeNomLePlusLong = $this->nom;
         }
-        return static::$villeNomLePlusLong;
     }
 }
