@@ -1,7 +1,7 @@
 <?php
 
 
-class Ville
+class VilleSansConstuctor
 {
     private $nom;
     private $departement;
