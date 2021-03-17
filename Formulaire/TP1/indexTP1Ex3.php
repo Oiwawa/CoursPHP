@@ -11,17 +11,21 @@
 <body>
 <fieldset>
     <legend>S'abonner</legend>
+    <?php
+    $email ="";
+    if (isset($_POST['email']) && !empty($_POST['email'])) {
+        $email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL);
+    }
+    ?>
     <form action="indexTP1Ex3.php" method="post">
         <label>E-mail : <br>
-            <input type="text" name="email">
+            <input type="text" name="email" value="<?= $email?>">
         </label>
         <input type="submit" value="Valider">
     </form>
 
     <?php
-    if (isset($_POST['email']) && !empty($_POST['email'])) {
-        $email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL);
-    }
+
     echo $email ."<br>";
     echo $_SERVER['HTTP_USER_AGENT'];
     ?>
