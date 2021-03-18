@@ -1,5 +1,6 @@
 <?php
 require_once 'Connexion.php';
+require_once './BO/Modele.php';
 
 class ModeleDAO
 {
@@ -14,5 +15,20 @@ class ModeleDAO
             echo "PDOException : " . $e->getMessage();
         }
         return $tableauDeResultat;
+    }
+
+    public function ajouter($modele) {
+        try {
+        $pdo = ConnectionProvider::getConnection();
+        $query = "INSERT INTO modeles VALUES (:id_modele, :marque, :modele, :carburant)";
+        $prepQuery = $pdo->prepare($query);
+        $prepQuery->bindParam(':id_modele', $modele->getIdModele());
+        $prepQuery->bindParam(':marque', $modele->getMarque());
+        $prepQuery->bindParam(':modele', $modele->getModele());
+        $prepQuery->bindParam(':carburant', $modele->getCarburant());
+        $prepQuery->execute();
+        } catch (PDOException $e){
+            $e->getMessage();
+        }
     }
 }

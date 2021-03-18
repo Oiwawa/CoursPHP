@@ -15,18 +15,19 @@ $modeleDAO = new ModeleDAO();
 $modeles = $modeleDAO->selectAll();
 ?>
 <div class="container">
-    <table class="is-bordered is-striped">
+    <table class="is-bordered is-striped" style="border: 1px solid black">
         <?php
         foreach ($modeles as $modele) {
-            echo "<tr>";
-            echo "<td>" . $modele['id_modele'] . "</td>";
-            echo "<td>" . $modele['marque'] . "</td>";
-            echo "<td>" . $modele['modele'] . "</td>";
-            echo "<td>" . $modele['carburant'] . "</td>";
+            echo "<tr style='border: 1px solid black'>";
+            echo "<td style='border: 1px solid black'>" . $modele['id_modele'] . "</td>";
+            echo "<td style='border: 1px solid black'>" . $modele['marque'] . "</td>";
+            echo "<td style='border: 1px solid black'>" . $modele['modele'] . "</td>";
+            echo "<td style='border: 1px solid black'>" . $modele['carburant'] . "</td>";
             echo "</tr>";
         }
         ?>
     </table>
+    <a href="./indexEx2.php">Exercice 2</a>
 </div>
 </body>
 </html>
