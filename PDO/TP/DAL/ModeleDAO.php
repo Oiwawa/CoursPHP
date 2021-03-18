@@ -26,7 +26,7 @@ class ModeleDAO
         $prepQuery->bindParam(':marque', $modele->getMarque());
         $prepQuery->bindParam(':modele', $modele->getModele());
         $prepQuery->bindParam(':carburant', $modele->getCarburant());
-        $prepQuery->execute();
+        $prepQuery->exec();
         } catch (PDOException $e){
             $e->getMessage();
         }
