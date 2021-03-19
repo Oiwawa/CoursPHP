@@ -31,7 +31,6 @@ if (isset($_POST['id_pers']) && isset($_POST['nom'])) {
     $id = settype($_POST['id_pers'], 'int');
     $nom = $_POST['nom'];
     $proprietaire = $proprietaireDAO->selectId($id, $nom);
-    var_dump($proprietaire);
 }
 ?>
 <br>
