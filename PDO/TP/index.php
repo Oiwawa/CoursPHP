@@ -28,6 +28,8 @@ $modeles = $modeleDAO->selectAll();
         ?>
     </table>
     <a href="./indexEx2.php">Exercice 2</a>
+    <a href="indexEx3.php">Exercice 3</a>
+
 </div>
 </body>
 </html>
